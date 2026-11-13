@@ -1,0 +1,10 @@
+dataset,rows,columns,duplicate_rows,duplicate_key_rows,missing_cells,missing_percentage,memory_mb,status
+olist_customers_dataset.csv,99441,5,0,0.0,0,0.0,11.03,SUCCESS
+olist_geolocation_dataset.csv,1000163,5,261831,,0,0.0,50.12,SUCCESS
+olist_order_items_dataset.csv,112650,7,0,,0,0.0,18.37,SUCCESS
+olist_order_payments_dataset.csv,103886,5,0,,0,0.0,8.11,SUCCESS
+olist_order_reviews_dataset.csv,99224,7,0,,145903,21.01,17.84,SUCCESS
+olist_orders_dataset.csv,99441,8,0,0.0,4908,0.62,21.95,SUCCESS
+olist_products_dataset.csv,32951,9,0,0.0,2448,0.83,3.73,SUCCESS
+olist_sellers_dataset.csv,3095,4,0,0.0,0,0.0,0.22,SUCCESS
+product_category_name_translation.csv,71,2,0,0.0,0,0.0,0.0,SUCCESS
