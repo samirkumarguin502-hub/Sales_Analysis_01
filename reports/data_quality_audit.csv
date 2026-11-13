@@ -1,0 +1,25 @@
+check,dataset,value,severity,details
+Duplicate primary keys,customers,0,WARNING,Expected unique key: customer_id
+Duplicate primary keys,orders,0,WARNING,Expected unique key: order_id
+Duplicate primary keys,products,0,WARNING,Expected unique key: product_id
+Duplicate primary keys,sellers,0,WARNING,Expected unique key: seller_id
+Duplicate primary keys,reviews,814,WARNING,Expected unique key: review_id
+Duplicate composite keys,order_items,0,WARNING,Expected unique combination: order_id + order_item_id
+Orphan foreign keys,orders,0,CRITICAL,customer_id must match customer_id
+Orphan foreign keys,order_items,0,CRITICAL,order_id must match order_id
+Orphan foreign keys,order_items,0,CRITICAL,product_id must match product_id
+Orphan foreign keys,order_items,0,CRITICAL,seller_id must match seller_id
+Orphan foreign keys,payments,0,CRITICAL,order_id must match order_id
+Orphan foreign keys,reviews,0,CRITICAL,order_id must match order_id
+Missing cells,orders,4908,INFO,Inspect column-level profile before treatment
+Missing cells,products,2448,INFO,Inspect column-level profile before treatment
+Missing cells,reviews,145903,INFO,Inspect column-level profile before treatment
+Missing cells,customers,0,INFO,Inspect column-level profile before treatment
+Missing cells,order_items,0,INFO,Inspect column-level profile before treatment
+Invalid review scores,reviews,0,WARNING,Valid score range: 1 to 5
+Unknown order statuses,orders,0,WARNING,Check unexpected order_status values
+Invalid timestamp sequence,orders,0,WARNING,order_approved_at should not precede order_purchase_timestamp
+Invalid timestamp sequence,orders,1359,WARNING,order_delivered_carrier_date should not precede order_approved_at
+Invalid timestamp sequence,orders,23,WARNING,order_delivered_customer_date should not precede order_delivered_carrier_date
+Unmapped product categories,products,13,WARNING,Categories without English translation
+Exact duplicate rows,geolocation,261831,INFO,Investigate before deduplication; no business key assumed
