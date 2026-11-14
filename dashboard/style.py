@@ -57,6 +57,47 @@ def apply_style():
         box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.25) !important;
         outline: none !important;
     }
+    
+/* Visible Streamlit Deploy button */
+[data-testid="stAppDeployButton"] {
+    background: #0F766E !important;
+    border: 1px solid #0F766E !important;
+    border-radius: 8px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+[data-testid="stAppDeployButton"] button {
+    background: #0F766E !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+[data-testid="stAppDeployButton"]:hover,
+[data-testid="stAppDeployButton"] button:hover {
+    background: #115E59 !important;
+    color: #FFFFFF !important;
+}
+header[data-testid="stHeader"] {
+    background: #F6F8FB !important;
+}
+
+
+    /* High-contrast Plotly chart labels */
+    .js-plotly-plot .xtick text,
+    .js-plotly-plot .ytick text,
+    .js-plotly-plot .legend text,
+    .js-plotly-plot .gtitle,
+    .js-plotly-plot .annotation-text {
+        fill: #172B4D !important;
+        opacity: 1 !important;
+        font-weight: 600 !important;
+    }
+    .js-plotly-plot .xtick text,
+    .js-plotly-plot .ytick text {
+        font-size: 13px !important;
+    }
+
     </style>''', unsafe_allow_html=True)
 
 def header(title, subtitle, eyebrow='COMMERCEIQ ANALYTICS'):
