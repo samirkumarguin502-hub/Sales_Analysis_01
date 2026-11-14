@@ -28,6 +28,35 @@ def apply_style():
     .tag {display:inline-block;background:#DDF4EF;color:#0F766E;border-radius:20px;padding:5px 10px;font-size:11px;font-weight:700;}
     div[data-testid="stDataFrame"] {border:1px solid #E8ECF2;border-radius:12px;overflow:hidden;}
     .stButton button {border-radius:9px;font-weight:600;}
+
+    /* Download button styling */
+    div[data-testid="stDownloadButton"] button {
+        background-color: #0F766E !important;
+        color: #FFFFFF !important;
+        border: 1px solid #0F766E !important;
+        border-radius: 10px !important;
+        min-height: 46px;
+        padding: 10px 18px;
+        font-weight: 700 !important;
+        width: 100%;
+    }
+
+    div[data-testid="stDownloadButton"] button p,
+    div[data-testid="stDownloadButton"] button span {
+        color: #FFFFFF !important;
+        font-weight: 700 !important;
+    }
+
+    div[data-testid="stDownloadButton"] button:hover {
+        background-color: #115E59 !important;
+        border-color: #115E59 !important;
+        color: #FFFFFF !important;
+    }
+
+    div[data-testid="stDownloadButton"] button:focus {
+        box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.25) !important;
+        outline: none !important;
+    }
     </style>''', unsafe_allow_html=True)
 
 def header(title, subtitle, eyebrow='COMMERCEIQ ANALYTICS'):
