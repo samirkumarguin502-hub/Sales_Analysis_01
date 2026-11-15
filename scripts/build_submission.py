@@ -102,6 +102,19 @@ plt.tight_layout()
 plt.savefig(CHARTS / "payment_method_distribution.png", dpi=160)
 plt.close()
 
+# Payment method share (pie chart)
+plt.figure(figsize=(8, 6))
+payment_mix.plot(
+    kind="pie",
+    autopct="%1.1f%%",
+    startangle=90
+)
+plt.title("Payment Method Share by Recorded Payment Value")
+plt.ylabel("")
+plt.tight_layout()
+plt.savefig(CHARTS / "payment_method_share_pie.png", dpi=160)
+plt.close()
+
 # Evidence-based observations
 top_category = delivered.groupby("category")["price"].sum().idxmax()
 top_category_revenue = delivered.groupby("category")["price"].sum().max()

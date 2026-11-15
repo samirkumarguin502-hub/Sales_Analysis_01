@@ -56,7 +56,9 @@ total_rows = int(ingestion["rows"].sum())
 total_missing = int(ingestion["missing_cells"].sum())
 total_duplicates_removed = int(cleaning["rows_removed"].sum())
 
-critical_checks = int((audit["severity"] == "CRITICAL").sum())
+critical_failures = int(
+    ((audit["severity"] == "CRITICAL") & (audit["value"] > 0)).sum()
+)
 warning_checks = int((audit["severity"] == "WARNING").sum())
 info_checks = int((audit["severity"] == "INFO").sum())
 
@@ -87,7 +89,7 @@ st.subheader("Validation severity distribution")
 a, b, c = st.columns(3)
 
 with a:
-    metric("CRITICAL CHECKS", f"{critical_checks:,}", "Check severity classification")
+    metric("CRITICAL FAILURES", f"{critical_failures:,}", "Critical rules with exceptions")
 
 with b:
     metric("WARNING CHECKS", f"{warning_checks:,}", "Require interpretation")

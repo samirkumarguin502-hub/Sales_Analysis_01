@@ -105,7 +105,7 @@ def clean_dataset(filename):
                 "Resolve before exporting."
             )
 
-    # Preserve missing product categories explicitly.
+    # Replace missing product categories with an explicit 'unknown' label.
     if filename == "olist_products_dataset.csv":
         df["product_category_name"] = (
             df["product_category_name"].astype("string").fillna("unknown")
