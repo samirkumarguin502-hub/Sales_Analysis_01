@@ -2,3 +2,8 @@ streamlit>=1.40,<2.0
 pandas>=2.2,<4.0
 numpy>=1.26,<3.0
 plotly>=5.24,<7.0
+
+# Submission charts and notebook execution
+matplotlib>=3.8,<4.0
+ipykernel>=6.29,<7.0
+nbconvert>=7.16,<8.0
